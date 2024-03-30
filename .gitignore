@@ -1,3 +1,5 @@
 env/
 haiku/
 .env
+files/
+.cache/
