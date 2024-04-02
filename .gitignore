@@ -3,3 +3,4 @@ haiku/
 .env
 files/
 .cache/
+.streamlit/
