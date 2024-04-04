@@ -16,17 +16,17 @@ st.set_page_config(
 
 
 class ChatCallbackHandler(BaseCallbackHandler):
-    message = ""
+  message = ""
 
-    def on_llm_start(self, *args, **kwargs):
-        self.message_box = st.empty()
+  def on_llm_start(self, *args, **kwargs):
+    self.message_box = st.empty()
 
-    def on_llm_end(self, *args, **kwargs):
-        save_message(self.message, "ai")
+  def on_llm_end(self, *args, **kwargs):
+    save_message(self.message, "ai")
 
-    def on_llm_new_token(self, token, *args, **kwargs):
-        self.message += token
-        self.message_box.markdown(self.message)
+  def on_llm_new_token(self, token, *args, **kwargs):
+    self.message += token
+    self.message_box.markdown(self.message)
 
 
 llm = ChatOpenAI(
