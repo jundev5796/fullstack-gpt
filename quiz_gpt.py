@@ -112,10 +112,15 @@ if not docs:
   """
   )
 else:
-  dificulty = st.selectbox(
+  difficulty = st.selectbox(
     "Select Difficulty", 
       (
         "Easy",
         "Hard",
       )
   )
+  difficulty_btn = st.button("Create Quiz")
+
+  # if difficulty == "Easy" && difficulty_btn:
+
+
