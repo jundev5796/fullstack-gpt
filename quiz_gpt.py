@@ -325,7 +325,7 @@ def wiki_search(term):
 # Sidebar
 with st.sidebar:
     OPENAI_API_KEY = ""
-    OPENAI_API_KEY = st.text_input("Write your OPEN API KEY")
+    OPENAI_API_KEY = st.text_input("Insert your API Key")
     if OPENAI_API_KEY:
         os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
         os.environ["OPENAI_API_KEY"]
