@@ -90,10 +90,9 @@ with st.sidebar:
     )
     url_name = url.split("://")[1].split("/")[0] if url else None
 
-    st.divider()
     st.markdown(
         """
-        GitHub Repo: https://github.com/jundev5796/fullstack-gpt/blob/29b4b0a6cc3b0ed11d3f39afd5789d713e5a95c4/pages/04_SiteGPT.py
+        GitHub Repo: https://github.com/jundev5796/fullstack-gpt/blob/master/SiteGPT.py
         """
     )
 
