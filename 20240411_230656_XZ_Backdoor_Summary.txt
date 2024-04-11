@@ -1,0 +1,14 @@
+On 29 March 2024, software developer Andres Freund reported that he had found a maliciously introduced backdoor in the Linux utility xz within the liblzma library in versions 5.6.0 and 5.6.1 released in February 2024. The backdoor targeted Debian- and RPM-based systems running on the x86-64 architecture. The backdoor gives an attacker remote code execution capabilities on the affected Linux system. The issue has been assigned a CVSS score of 10.0, the highest possible score.
+
+Background
+Microsoft employee and PostgreSQL developer Andres Freund reported the backdoor after investigating a performance regression in Debian Sid. Freund noticed that SSH connections were generating an unexpectedly high amount of CPU usage as well as causing errors in Valgrind, a memory debugging tool. Freund reported his finding to Openwall Project's open source security mailing list, which brought it to the attention of various software vendors. There is evidence that the attacker made efforts to obfuscate the code, as the backdoor consists of multiple stages that act together.
+
+Mechanism
+The malicious code is known to be in 5.6.0 and 5.6.1 releases of the XZ Utils software package. The exploit remains dormant unless a specific third-party patch of the SSH server is used. Under the right circumstances this interference could potentially enable a malicious actor to break sshd authentication and gain unauthorized access to the entire system remotely. The malicious mechanism consists of two compressed test files that contain the malicious binary code. These files are available in the git repository, but remain dormant unless extracted and injected into the program.
+
+Response
+Remediation
+The US federal agency responsible for cyber security and infrastructure, the Cybersecurity and Infrastructure Security Agency, has issued a security advisory recommending that the affected devices should roll back to a previous uncompromised version. Linux software vendors, including Red Hat, SUSE, and Debian, have mirrored the CISA advisory, and reverted the updates for the affected packages to older versions.
+
+Broader response
+Computer scientist Alex Stamos opined that 'this could have been the most widespread and effective backdoor ever planted in any software product', noting that had the backdoor remained undetected, it would have 'given its creators a master key to any of the hundreds of millions of computers around the world that run SSH'. In addition, the incident also started a discussion regarding the viability of having critical pieces of cyberinfrastructure depend on unpaid volunteers.
