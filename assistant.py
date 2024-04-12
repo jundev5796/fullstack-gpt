@@ -40,6 +40,6 @@ with st.sidebar:
 
     st.markdown(
         """
-        GitHub Repo: https://github.com/jundev5796/fullstack-gpt/blob/master/SiteGPT.py
+        GitHub Repo: https://github.com/jundev5796/fullstack-gpt/commit/395c6f63c76029c40ea1bc3a8ecfabd2e5f643d5
         """
     )
