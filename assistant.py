@@ -16,7 +16,7 @@ with st.sidebar:
         st.session_state["api_key"] = ""
         print(st.session_state["api_key"])
 
-    if st.button(":red[Reset API_KEY]"):
+    if st.button(":red[Remove Key]"):
         reset_api_key()
 
     api_key = api_key_input.text_input(
@@ -29,7 +29,8 @@ with st.sidebar:
         st.session_state["api_key"] = api_key
         st.rerun()
 
-    # print(api_key)
+    st.text("")
+    st.text("")
 
     url = st.text_input(
         "**:blue[Write down a URL]**",
@@ -37,6 +38,9 @@ with st.sidebar:
         value="https://developers.cloudflare.com/sitemap.xml",
     )
     url_name = url.split("://")[1].split("/")[0] if url else None
+
+    st.text("")
+    st.text("")
 
     st.markdown(
         """
