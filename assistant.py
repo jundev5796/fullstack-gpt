@@ -1,8 +1,8 @@
 from langchain.utilities import DuckDuckGoSearchAPIWrapper, WikipediaAPIWrapper
 # from openai import OpenAI
+# import yfinance
 import openai as client
 import streamlit as st
-import yfinance
 import json
 import time
 import os
