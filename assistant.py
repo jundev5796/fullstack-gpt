@@ -1,5 +1,5 @@
 from langchain.utilities import DuckDuckGoSearchAPIWrapper, WikipediaAPIWrapper
-from openai import OpenAI
+# from openai import OpenAI
 import openai as client
 import streamlit as st
 import yfinance
@@ -140,7 +140,8 @@ with st.sidebar:
 
 if api_key and api_key.startswith("sk-"):
     st.session_state["api_key"] = api_key
-    client = OpenAI(api_key=api_key)
+    client.api_key = api_key
+    # client = OpenAI(api_key=api_key)
 
     assistant_id = "asst_KNw8bVa9WzsXaMUD5BWRm0dv"
 
